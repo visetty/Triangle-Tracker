@@ -2,6 +2,18 @@
   display: none;
 }
 
+.jumbotron {
+  background-color: teal;
+  font-weight: bolder;
+  color: white;
+}
+
 .jumbotron h1 {
   text-align: center;
+}
+
+.btn {
+  background-color: teal;
+  font-weight: bolder;
+  color: white;
 }
