@@ -61,6 +61,11 @@ $(document).ready(function() {
       }
     }
 
+    $("input#side1").val("");
+    $("input#side2").val("");
+    $("input#side3").val("");
+
+
 
   });
 });
