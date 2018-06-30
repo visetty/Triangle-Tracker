@@ -55,11 +55,13 @@ $(document).ready(function() {
       } else if (equilateralTriangle(sideA, sideB, sideC)) {
         $(".triangle").text("equilateralTriangle!");
         $(".result").show();
-      } else {
+      }
+    }
+    else {
         $(".triangle").text("Its not a triangle!");
         $(".result").show();
       }
-    }
+
 
     $("input#side1").val("");
     $("input#side2").val("");
