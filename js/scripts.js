@@ -17,7 +17,11 @@ var scaleneTriangle = function(sideOne, sideTwo, sideThree) {
 }
 
 var isoscelesTriangle = function(sideOne, sideTwo, sideThree) {
-  if ((sideOne === sideTwo) || (sideTwo === sideThree) || (sideThree === sideOne)) {
+  if ((sideOne === sideTwo) && (sideTwo !== sideThree) && (sideThree !== sideOne)) {
+    return true;
+  } else if ((sideOne !== sideTwo) && (sideTwo === sideThree) && (sideThree !== sideOne)) {
+    return true;
+  } else if ((sideOne !== sideTwo) && (sideTwo !== sideThree) && (sideThree === sideOne)) {
     return true;
   } else {
     return false;
@@ -36,6 +40,7 @@ var equilateralTriangle = function(sideOne, sideTwo, sideThree) {
 
 $(document).ready(function() {
   $("form#Triangle-Tracker").submit(function(event) {
+    event.preventDefault();
     var sideA = parseInt($("input#side1").val());
     var sideB = parseInt($("input#side2").val());
     var sideC = parseInt($("input#side3").val());
@@ -55,8 +60,6 @@ $(document).ready(function() {
         $(".result").show();
       }
     }
-
-    event.preventdefault();
 
 
   });
