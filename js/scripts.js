@@ -27,6 +27,23 @@ var isoscelesTriangle = function(sideOne, sideTwo, sideThree) {
     return false;
   }
 }
+/*
+var determinTringle = function(sideOne, sideTwo, sideThree) {
+  var TriangleType = "";
+  if ((sideOne + sideTwo <= sideThree) || (sideTwo + sideThree <= sideOne) || (sideThree + sideOne <= sideTwo)) {
+    TriangleType = "Not a Triangle";
+  } else if ((sideOne === sideTwo) && (sideOne === sideThree) && (sideTwo === sideThree)) {
+    TriangleType = "Equilateral Triangle";
+  } else if ((sideOne === sideTwo)  || (sideOne === sideThree) || (sideTwo === sideThree)) {
+    TriangleType = "Isosceles Triangle";
+  } else {
+    TriangleType = "Scalene Triangle";
+  }
+  return TriangleType;
+}
+*/
+
+
 
 var equilateralTriangle = function(sideOne, sideTwo, sideThree) {
   if ((sideOne === sideTwo) && (sideTwo === sideThree) && (sideThree === sideOne)) {
@@ -56,12 +73,16 @@ $(document).ready(function() {
         $(".triangle").text("equilateralTriangle!");
         $(".result").show();
       }
-    }
-    else {
-        $(".triangle").text("Its not a triangle!");
+    } else {
+        $(".triangle").text("Not a triangle!");
         $(".result").show();
-      }
+    }
 
+/*
+    $(".triangle").text(determinTringle(sideA, sideB, sideC));
+    $(".result").show();
+
+*/
 
     $("input#side1").val("");
     $("input#side2").val("");
